@@ -1,6 +1,6 @@
 #bot data
 
-token = '6963124780:AAFctwYVr9YL1CHyxoin1VTHJ_cRw2kms7o'
+token = '6493440090:AAFNmEth1VTin6OvRe9N8zw1V-j-szX-D0I'
 #   6623328753:AAGCYOAB4dSpTt39srhmjcFgi8wSF-7XZtU
 admin_id = '1346629196'
 operator = '1346629196'    #первый параметр - id, второй - занят ли

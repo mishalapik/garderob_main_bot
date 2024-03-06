@@ -8,7 +8,7 @@ from core.config.data import admin_id,token
 from core.handlers.basic import get_start,info,app_temp,connect,orders,state_check
 
 from core.handlers.callback import (about,requisites,mailing,ask_a_question,mailing_on,mailing_off,mailing_check,call_op_to_continue,about_us,about_return,
-                                    about_delivery,size_tables,shoes_table,clothes_table,ask_or_dialog,working_time,learn_sizes,brands_guarantee,
+                                    about_delivery,size_tables,shoes_male_table,shoes_female_table,clothes_table,ask_or_dialog,working_time,learn_sizes,brands_guarantee,
                                     delivery_return,discounts_bounus,prices_payments,back_to_info_kb,backto_about,backto_size_tables,backto_FAQ,pants_table,
                                     decline_offer,terms_of_use)
 
@@ -93,7 +93,8 @@ async def start():
     dp.callback_query.register(learn_sizes,F.data=='learn_sizes')
     dp.callback_query.register(working_time,F.data=='working_time')
     dp.callback_query.register(ask_or_dialog,F.data == 'ask')
-    dp.callback_query.register(shoes_table,F.data == 'shoes_table')
+    dp.callback_query.register(shoes_male_table,F.data == 'shoes_male_table')
+    dp.callback_query.register(shoes_female_table, F.data == 'shoes_female_table')
     dp.callback_query.register(clothes_table, F.data == 'clothes_table')
     dp.callback_query.register(size_tables,F.data == 'size_tables')
     dp.callback_query.register(dyalog_start_or_drop,F.data == 'connect_to_operator')

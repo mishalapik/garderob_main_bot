@@ -59,10 +59,12 @@ call_op_offer_kb = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(t
 
 shoes_or_clothes_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Таблица размеров верхней одежды',callback_data='clothes_table')],
-    [InlineKeyboardButton(text='Таблица размеров обуви',callback_data='shoes_table')],
+    [InlineKeyboardButton(text='Таблица размеров мужской обуви',callback_data='shoes_male_table')],
+    [InlineKeyboardButton(text='Таблица размеров женской обуви',callback_data='shoes_female_table')],
     [InlineKeyboardButton(text='Таблица размеров брючных изделий',callback_data='pants_table')],
     [InlineKeyboardButton(text='Назад', callback_data='back_to_info_kb')]
 ])
+
 backto_sizetables = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Назад',callback_data='backto_size_tables')]])
 channelbtn_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Перейти в канал',url='https://t.me/garderob_club2')]

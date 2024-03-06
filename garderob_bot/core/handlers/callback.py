@@ -1,4 +1,4 @@
-from aiogram import Bot
+from aiogram import Bot,types
 from aiogram.types import CallbackQuery,InputMediaPhoto,FSInputFile
 from aiogram.fsm.context import FSMContext
 
@@ -122,13 +122,23 @@ async def size_tables(call:CallbackQuery,bot:Bot):
     # await bot.send_photo(chat_id = call.from_user.id,photo='AgACAgIAAxkBAAIWt2VDfbaAJyIOrSuMCjtuYJA4D_lOAAJO0TEbB1YZSsz-uPYLrlK7AQADAgADeAADMwQ',caption='Таблица размеров')
     await call.answer()
 
-async def shoes_table(call:CallbackQuery,bot:Bot):
+async def shoes_male_table(call:CallbackQuery,bot:Bot):
     # photo = InputMediaPhoto(type='photo',media=FSInputFile(r'C:\Users\Mikhail\PycharmProjects\garderob_bot\core\media\shoes.jpg'))
-    await bot.send_photo(chat_id=call.from_user.id,
-                         photo=r'https://sun9-31.userapi.com/impg/VnItjis2k6HxUfgAd_JDLD1gXwj5MxdfMBP_JA/ZO7GyQg9LSo.jpg?size=1500x1600&quality=96&sign=9d4461846486ad9561a6f6fb4e3c1f8f&type=album',
-                         caption='Таблица размеров обуви',reply_markup=backto_sizetables)
+
+    await bot.send_photo(chat_id=call.from_user.id,photo = FSInputFile('core/media/male_shoes_table.png'),reply_markup=backto_sizetables)
+    # await bot.send_photo(chat_id=call.from_user.id,
+    #                      photo=r'https://sun9-31.userapi.com/impg/VnItjis2k6HxUfgAd_JDLD1gXwj5MxdfMBP_JA/ZO7GyQg9LSo.jpg?size=1500x1600&quality=96&sign=9d4461846486ad9561a6f6fb4e3c1f8f&type=album',
+    #                      caption='Таблица размеров обуви',reply_markup=backto_sizetables)
     await call.answer()
 
+async def shoes_female_table(call:CallbackQuery,bot:Bot):
+    # photo = InputMediaPhoto(type='photo',media=FSInputFile(r'C:\Users\Mikhail\PycharmProjects\garderob_bot\core\media\shoes.jpg'))
+
+    await bot.send_photo(chat_id=call.from_user.id,photo = FSInputFile('core/media/female_shoes_table.png'),reply_markup=backto_sizetables)
+    # await bot.send_photo(chat_id=call.from_user.id,
+    #                      photo=r'https://sun9-31.userapi.com/impg/VnItjis2k6HxUfgAd_JDLD1gXwj5MxdfMBP_JA/ZO7GyQg9LSo.jpg?size=1500x1600&quality=96&sign=9d4461846486ad9561a6f6fb4e3c1f8f&type=album',
+    #                      caption='Таблица размеров обуви',reply_markup=backto_sizetables)
+    await call.answer()
 async def clothes_table(call:CallbackQuery,bot:Bot):
 
     await bot.send_photo(chat_id=call.from_user.id,
